@@ -41,6 +41,7 @@ public class PlayerMovement : NetworkBehaviour
         if (!IsOwner || isDead) return;
 
         MovePlayer();
+        HandleShooting();
 
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -100,11 +101,28 @@ public class PlayerMovement : NetworkBehaviour
         }
     }
 
+    private void HandleShooting()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Debug.Log("SOL TIK BASILDI!");
+            if (animator != null)
+            {
+                animator.SetTrigger("Shoot");
+            }
+        }
+    }
+
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
         if (IsOwner)
         {
-            Camera.main.GetComponent<CameraController>().target = this.transform;
+            CameraController camControl = FindFirstObjectByType<CameraController>();
+            if (camControl != null)
+            {
+                camControl.target = this.transform;
+            }
         }
     }
 
