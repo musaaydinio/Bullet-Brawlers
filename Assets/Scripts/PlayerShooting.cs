@@ -51,6 +51,11 @@ public class PlayerShooting : NetworkBehaviour
 
         GameObject bullletInstace=Instantiate(bulletPrefab,firePoint.position,firePoint .rotation);
 
+        if(bullletInstace.TryGetComponent<Bullet>(out var bulletScript))
+        {
+            bulletScript.SetOwner(OwnerClientId);
+        }
+
         NetworkObject bulletNetworkObject=bullletInstace.GetComponent<NetworkObject>();
         if (bulletNetworkObject != null)
         {

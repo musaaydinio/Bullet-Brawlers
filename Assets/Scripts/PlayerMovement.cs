@@ -17,9 +17,7 @@ public class PlayerMovement : NetworkBehaviour
     public float duckHeight = 1f;
     private Vector3 originalCenter;
     private Vector3 duckCenter;
-
-    private bool isDead = false;
-
+  
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -38,15 +36,11 @@ public class PlayerMovement : NetworkBehaviour
 
     private void Update()
     {
-        if (!IsOwner || isDead) return;
+        if (!IsOwner) return;
 
         MovePlayer();
         HandleShooting();
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Die();
-        }
+      
     }
 
     private void MovePlayer()
@@ -124,17 +118,5 @@ public class PlayerMovement : NetworkBehaviour
                 camControl.target = this.transform;
             }
         }
-    }
-
-    public void Die()
-    {
-        isDead = true;
-
-        if (animator != null)
-        {
-            animator.SetBool("isDead", true);
-        }
-
-        controller.enabled = false;
-    }
+    }  
 }
