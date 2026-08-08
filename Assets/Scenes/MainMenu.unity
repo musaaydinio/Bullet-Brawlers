@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 496425784}
   - component: {fileID: 496425783}
   - component: {fileID: 496425782}
+  - component: {fileID: 496425785}
   m_Layer: 0
   m_Name: NetwokManager
   m_TagString: Untagged
@@ -352,7 +353,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 496425782}
-    PlayerPrefab: {fileID: 1926463707796657117, guid: febbbb27118abe44188fa945b64f57d5, type: 3}
+    PlayerPrefab: {fileID: 0}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: 9b24017a995643845b28d4b8e6002e5a, type: 2}
@@ -393,6 +394,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &496425785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496425781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796aa9e5b864db9428176ac08e853820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 1926463707796657117, guid: febbbb27118abe44188fa945b64f57d5, type: 3}
 --- !u!1 &602767517
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,11 +1,11 @@
 using UnityEngine;
 using Unity.Netcode;
-using Unity.VisualScripting;
+
 public class Bullet : NetworkBehaviour
 {
     [SerializeField] private float speed = 25f;
     [SerializeField] private int damageAmount = 20;
-    [SerializeField] private float lifeTime = 3f;
+    [SerializeField] private float lifeTime = 5f;
 
     private Rigidbody rb;
     private ulong ownerClientId;
@@ -17,11 +17,12 @@ public class Bullet : NetworkBehaviour
 
     public void SetOwner(ulong clientId)
     {
-        ownerClientId= clientId;
+        ownerClientId = clientId;
     }
+
     public override void OnNetworkSpawn()
     {
-        rb.linearVelocity=transform.forward*speed;
+        rb.linearVelocity = transform.forward * speed;
 
         if (IsServer)
         {
@@ -33,25 +34,37 @@ public class Bullet : NetworkBehaviour
     {
         if (!IsServer) return;
 
-        if(other.TryGetComponent<PlayerHealth>(out var targetHealth))
+        // Vurulan objenin veya ebeveyninin PlayerHealth scriptini bul
+        PlayerHealth targetHealth = other.GetComponentInParent<PlayerHealth>();
+        if (targetHealth == null)
         {
-            if(targetHealth.OwnerClientId != ownerClientId)
+            targetHealth = other.GetComponent<PlayerHealth>();
+        }
+
+        if (targetHealth != null)
+        {
+            // Kendi attýðýmýz mermi bize çarparsa ÝPTAL ET (Kendi kendini vuramazsýn)
+            if (targetHealth.OwnerClientId == ownerClientId)
             {
-                targetHealth.TakeDamge(damageAmount);
-                DestroyBullet();
+                return;
             }
-        }
-        else if(other.CompareTag("Bullet"))
-        {
+
+            // Doðru hedefe hasar ver ve konsola yazdýr
+            Debug.Log($"Mermiyi Atan: {ownerClientId} -> Vurulan Oyuncu: {targetHealth.OwnerClientId}");
+            targetHealth.TakeDamage(damageAmount);
             DestroyBullet();
+            return;
         }
+
+        // Duvara veya zemine çarptýysa sil
+        DestroyBullet();
     }
 
     private void DestroyBullet()
     {
-        CancelInvoke (nameof(DestroyBullet));   
+        CancelInvoke(nameof(DestroyBullet));
 
-        if(NetworkObject != null && NetworkObject.IsSpawned)
+        if (NetworkObject != null && NetworkObject.IsSpawned)
         {
             NetworkObject.Despawn(true);
         }

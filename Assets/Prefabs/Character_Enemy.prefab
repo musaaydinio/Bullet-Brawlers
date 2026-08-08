@@ -928,8 +928,10 @@ GameObject:
   - component: {fileID: 6787982735588086780}
   - component: {fileID: 4086268015803638674}
   - component: {fileID: 244708191585073902}
-  - component: {fileID: 6606586449818287661}
   - component: {fileID: 3765341951912371681}
+  - component: {fileID: 5066300567285491114}
+  - component: {fileID: -998698953976828260}
+  - component: {fileID: 1627737700681650022}
   m_Layer: 0
   m_Name: Character_Enemy
   m_TagString: Untagged
@@ -946,7 +948,7 @@ Transform:
   m_GameObject: {fileID: 1926463707796657117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.6645786, z: 0, w: 0.74721843}
-  m_LocalPosition: {x: 33.66, y: -0.19000006, z: 13.05}
+  m_LocalPosition: {x: 33.66, y: 0, z: 13.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -995,11 +997,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  speed: 5
   gravity: -9.81
   jumpHeight: 1.2
   mouseSensitivity: 100
-  originalHeight: 2
-  duckHeight: 1
+  bulletPrefab: {fileID: 1735600967344606563, guid: fe51dc32e3ad47042baa4a4941b23505, type: 3}
+  firePoint: {fileID: 8122796629850047187}
+  networkedSpeed:
+    m_InternalValue: 0
+  networkedGrounded:
+    m_InternalValue: 1
 --- !u!143 &4086268015803638674
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1016,9 +1023,9 @@ CharacterController:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Height: 2.24
+  m_Height: 2
   m_Radius: 0.35
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1047,23 +1054,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6606586449818287661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926463707796657117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd207e467647f9e4f9917269206985d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  bulletPrefab: {fileID: 1735600967344606563, guid: fe51dc32e3ad47042baa4a4941b23505, type: 3}
-  firePoint: {fileID: 8122796629850047187}
-  fireRate: 0.2
-  shootTriggerName: Shoot
 --- !u!114 &3765341951912371681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,10 +1068,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   maxHealth: 100
-  healthSlider: {fileID: 266081175011225257}
-  deathName: Die
   currentHealth:
     m_InternalValue: 100
+  healthSlider: {fileID: 266081175011225257}
+  playerCanvas: {fileID: 8141956218688243242}
+--- !u!114 &5066300567285491114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926463707796657117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7c14e6544414d46982c0855bceca3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkTransformExpanded: 1
+  AutoOwnerAuthorityTickOffset: 1
+  PositionInterpolationType: 0
+  RotationInterpolationType: 0
+  ScaleInterpolationType: 0
+  PositionLerpSmoothing: 1
+  PositionMaxInterpolationTime: 0.1
+  RotationLerpSmoothing: 1
+  RotationMaxInterpolationTime: 0.1
+  ScaleLerpSmoothing: 1
+  ScaleMaxInterpolationTime: 0.1
+  AuthorityMode: 1
+  TickSyncChildren: 0
+  UseUnreliableDeltas: 0
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  UseQuaternionSynchronization: 0
+  UseQuaternionCompression: 0
+  UseHalfFloatPrecision: 0
+  InLocalSpace: 0
+  SwitchTransformSpaceWhenParented: 0
+  Interpolate: 1
+  SlerpPosition: 1
+--- !u!114 &-998698953976828260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926463707796657117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  TransitionStateInfoList:
+  - IsCrossFadeExit: 0
+    Layer: 1
+    OriginatingState: -1115293312
+    DestinationState: -453240694
+    TransitionDuration: 0.05
+    TriggerNameHash: -1316629574
+    TransitionIndex: 0
+  m_Animator: {fileID: 244708191585073902}
+--- !u!136 &1627737700681650022
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926463707796657117}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Height: 2.06
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.12, z: 0.13}
 --- !u!1 &1935979468020247898
 GameObject:
   m_ObjectHideFlags: 0

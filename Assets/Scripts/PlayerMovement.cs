@@ -1,122 +1,165 @@
-using UnityEngine;
 using Unity.Netcode;
+using UnityEngine;
 
 public class PlayerMovement : NetworkBehaviour
 {
     private CharacterController controller;
     private Animator animator;
 
-    private float speed = 5f;
+    [Header("Hareket Ayarlarý")]
+    public float speed = 5f;
     public float gravity = -9.81f;
     public float jumpHeight = 1.2f;
     private Vector3 velocity;
     public float mouseSensitivity = 100f;
 
-    [Header("Çömelme Ayarlarý")]
-    public float originalHeight = 2f;
-    public float duckHeight = 1f;
-    private Vector3 originalCenter;
-    private Vector3 duckCenter;
+    [Header("Ateþ Etme Ayarlarý")]
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
+    private CameraController camControl;
   
-    private void Start()
+    public NetworkVariable<float> networkedSpeed = new NetworkVariable<float>(
+        0f,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
+    public NetworkVariable<bool> networkedGrounded = new NetworkVariable<bool>(
+        true,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
+    private void Awake()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+    }
 
-        if (controller != null)
-        {
-            originalHeight = controller.height;
-            originalCenter = controller.center;
-            duckCenter = new Vector3(originalCenter.x, originalCenter.y / 2f, originalCenter.z);
-        }
-
+    private void Start()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    private void Update()
+    public override void OnNetworkSpawn()
     {
-        if (!IsOwner) return;
+        base.OnNetworkSpawn();
+
+        if (controller == null)
+        {
+            controller = GetComponent<CharacterController>();
+        }
+
+        Camera myCam = GetComponentInChildren<Camera>();
+        AudioListener myListener = GetComponentInChildren<AudioListener>();
+
+        if (IsOwner)
+        {            
+            if (controller != null) controller.enabled = true;
+            if (myCam != null) myCam.enabled = true;
+            if (myListener != null) myListener.enabled = true;
+
+            camControl = GetComponentInChildren<CameraController>();
+            if (camControl != null) camControl.target = this.transform;
+        }
+        else
+        {
+            if (controller != null) controller.enabled = false;
+            if (myCam != null) myCam.enabled = false;
+            if (myListener != null) myListener.enabled = false;
+        }
+    }
+
+    private void Update()
+    {      
+        if (!IsOwner)
+        {
+            if (animator != null)
+            {              
+                animator.SetFloat("Speed", networkedSpeed.Value);
+                animator.SetBool("isGrounded", networkedGrounded.Value);
+            }
+            return;
+        }
 
         MovePlayer();
         HandleShooting();
-      
     }
 
     private void MovePlayer()
     {
+        if (controller == null || !controller.enabled) return;
+
         bool isGrounded = controller.isGrounded;
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
-        
-        bool isDucking = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C);
-       
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if (isDucking)
-        {          
-            move = Vector3.zero;
-            
-            controller.height = duckHeight;
-            controller.center = duckCenter;
-        }
-        else
-        {            
-            controller.height = originalHeight;
-            controller.center = originalCenter;
-        }
-       
         controller.Move(move * speed * Time.deltaTime);
 
-        // --- Zýplama ---
-        if (Input.GetButtonDown("Jump") && isGrounded && !isDucking)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        // --- Yerçekimi ---
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        // --- Fare Dönüþü ---
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         transform.Rotate(Vector3.up * mouseX);
 
-        // --- ANÝMATÖR BÝLGÝ GÖNDERÝMÝ ---
+        float currentMoveMagnitude = move.magnitude;
+        
+        UpdateAnimatorServerRpc(currentMoveMagnitude, isGrounded);
+
         if (animator != null)
         {
-            animator.SetFloat("Speed", move.magnitude);
+            animator.SetFloat("Speed", currentMoveMagnitude);
             animator.SetBool("isGrounded", isGrounded);
-            animator.SetBool("isDucking", isDucking);
         }
+    }
+
+    [ServerRpc]
+    private void UpdateAnimatorServerRpc(float newSpeed, bool newGrounded)
+    {
+        networkedSpeed.Value = newSpeed;
+        networkedGrounded.Value = newGrounded;
     }
 
     private void HandleShooting()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("SOL TIK BASILDI!");
-            if (animator != null)
+            if (animator != null) animator.SetTrigger("Shoot");
+
+            if (firePoint != null)
             {
-                animator.SetTrigger("Shoot");
+                ShootServerRpc(firePoint.position, firePoint.rotation,OwnerClientId);
             }
         }
     }
 
-    public override void OnNetworkSpawn()
+    [ServerRpc]
+    private void ShootServerRpc(Vector3 spawnPosition, Quaternion spawnRotation,ulong shooterClient)
     {
-        base.OnNetworkSpawn();
-        if (IsOwner)
+        if (bulletPrefab == null) return;
+
+        GameObject bullet = Instantiate(bulletPrefab, spawnPosition, spawnRotation);
+
+        if (bullet.TryGetComponent<Bullet>(out var bulletScprit))
         {
-            CameraController camControl = FindFirstObjectByType<CameraController>();
-            if (camControl != null)
-            {
-                camControl.target = this.transform;
-            }
+            bulletScprit.SetOwner(shooterClient);
         }
-    }  
+        if (bullet.TryGetComponent<NetworkObject>(out var netObj))
+        {
+            netObj.Spawn();
+        }
+    }
 }
