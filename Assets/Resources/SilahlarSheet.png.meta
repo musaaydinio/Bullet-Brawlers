@@ -1,0 +1,1906 @@
+fileFormatVersion: 2
+guid: de01c14ab837358498a8d82ee61e1b83
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pistol
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 958
+        width: 130
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6c30419cef3c44899e6648b56bbb76
+      internalID: 361250025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_1"
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 990
+        width: 369
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353caf1a1cf213c4d873bb609d7e731c
+      internalID: 1610997902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_2"
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 951
+        width: 221
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2751f6ee5087db4784ac0ddc8a40d95
+      internalID: 237517360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M468
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 920
+        width: 368
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5023d512b7c9b54cb6a4aed3b1129ee
+      internalID: 1666593346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_4"
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 936
+        width: 199
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5941cc98474385e4c9aa2ffb90dab315
+      internalID: 1137930896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revolver-Small
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 822
+        width: 116
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90077a4ab4d1c984ea367340ab405dad
+      internalID: 1024354770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_6"
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 861
+        width: 130
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f3042710614a44d80226255b401249
+      internalID: -258051739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShotGun-2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 875
+        width: 411
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ab471c6bd83e14f92322ad341daf9e
+      internalID: 572003004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AKS-74U
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 830
+        width: 245
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e0863945b61ca4f81f18e0644ca972
+      internalID: -1203644339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zdfsdfd
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 772
+        width: 344
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4cef06918a1e24eb0ecf1f914314bf
+      internalID: -1720166280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SMG
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 820
+        width: 183
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109bddb079074f64a9d51d8144d5eb6c
+      internalID: 1265223788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_11"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 751
+        width: 141
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a14801c62abe745ae7aee2563ab01d
+      internalID: 1350623357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_12"
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 761
+        width: 131
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81930584f25dd442bf73a3d4f2079fb
+      internalID: 1962704593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZDFHSDJGH
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 767
+        width: 412
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235cbca823e4a0a439f2f638419b3e86
+      internalID: -1344209445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK 47
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 692
+        width: 383
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf945b046438ea143b573bec8b5027e7
+      internalID: -1315326779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP7
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 704
+        width: 265
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300f09c8746805d468fabc12586ad656
+      internalID: -1089929173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revolver
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 659
+        width: 140
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f64472fd82a8f4a95eee7eb78fb0ab
+      internalID: -46685425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_17"
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 664
+        width: 130
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26d9fd8e477af146b1d4b639847af4a
+      internalID: -1662047285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_18"
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 663
+        width: 386
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c09d68ebadc7c94cbff071833cb1848
+      internalID: 1590461060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_19"
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 570
+        width: 389
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1bb0b07bcf7634cbf53f3183e5057b
+      internalID: -802015037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_20"
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 661
+        width: 268
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a9a0ee2935c404d93589dddeecd1f1
+      internalID: -938971068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UMP-45
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 587
+        width: 356
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105d04551a26a59419502a815900a3aa
+      internalID: -216954404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_22"
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 572
+        width: 142
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31a00b34e082924e8d42a55fbb18629
+      internalID: -181648866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_23"
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 570
+        width: 174
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81c2f8e03ab5064baec45266a977a42
+      internalID: 70678506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShotGun
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 547
+        width: 317
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a69264b6d010d4baddc087656252df
+      internalID: 571537250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_25"
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 528
+        width: 212
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87498ecf754c6549a8a003f72197a54
+      internalID: -1122715189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP9
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 448
+        width: 289
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283256f966ce8be49916597338089ae5
+      internalID: 1912674898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_27"
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 487
+        width: 134
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081dd7193558ece4bb4bf783f303a822
+      internalID: -1966402013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_28"
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 443
+        width: 140
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d89ac95feff974c8b2eb52106b1f13
+      internalID: 1952903733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShotCannon
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 443
+        width: 263
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1825c40a87dfc4e408bccb7d1f0ead8d
+      internalID: -949195700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_30"
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 445
+        width: 385
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3873cf84dc64351468b36b77b5f8c62d
+      internalID: 1332602703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_31"
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 389
+        width: 49
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cc36d9b81ad4242a2954481a5fe2f0
+      internalID: -1538689318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_32"
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 318
+        width: 517
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486b0624e40aa2b4c857236c94ac2c51
+      internalID: 1732426351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootGun
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 343
+        width: 512
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bfc4daaec1e82488b3c07987fa7431
+      internalID: -828902349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zdsgsdgsd
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 304
+        width: 307
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4933ce38e5c776408b04ecc1be39f99
+      internalID: -1804312306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_35"
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 358
+        width: 140
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f969a7b9a182bf44092ef5fa6ee3fc9f
+      internalID: 866567111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_36"
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 337
+        width: 20
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c245ea18808d84428aae4a41dcfe9ec
+      internalID: -842382503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_37"
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 358
+        width: 126
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84df8467af8e3724192d1fd18603140a
+      internalID: 88488599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_38"
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 325
+        width: 148
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1adfa8a38ceb7574db921d27c4873410
+      internalID: 1512230944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_39"
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 329
+        width: 123
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c871aed667a8b4a8335c2537edeea1
+      internalID: 1990157872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_40"
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 333
+        width: 82
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc81d1ba183b45c42880a826be33e3c8
+      internalID: -208273453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_41"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 292
+        width: 153
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f75f19c2e9d02449fbed5ffdd9a197
+      internalID: 362331728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_42"
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 302
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1f75a8f8d7d8a4f8b4645c37b3dc97
+      internalID: -1915724614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_43"
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 299
+        width: 128
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62c4d6b9e3c1ff43a71f56deda088ec
+      internalID: -15698462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_44"
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 306
+        width: 82
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef9fd3e4c7d84a43b5ee5f28b628e81
+      internalID: -1481245911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_45"
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 202
+        width: 526
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e22cf9cb51aba43b915b8f40fbd098
+      internalID: -1210148016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_46"
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 224
+        width: 449
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9c42ca12df6844387a05fe569600d5
+      internalID: -1054169632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_47"
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 227
+        width: 117
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4936baec676774f8e85c20c345ad74
+      internalID: 1338056233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_48"
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 270
+        width: 190
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c39750f070fbd4e8b93c198146a416
+      internalID: 777229271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_49"
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 193
+        width: 269
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5fcd8dcc8b98e4aa44078626310af8
+      internalID: 602633526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_50"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 18
+        width: 202
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbf239c5184daf4baed4cacfbb8bc5e
+      internalID: -1062971253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_51"
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 51
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa2dc19135321b43bc2c42167b85a28
+      internalID: -158867160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_52"
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 131
+        width: 94
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c199fa82459de44a716e39fdc98395
+      internalID: 270665556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_53"
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 56
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2a7b6cbfb9b4b40b566ede55af7468
+      internalID: -445011304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_54"
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 56
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca840dfba73d9a044a38947c94a08597
+      internalID: 1929397483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_55"
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 42
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63002d5ebe3ccf847821356c7717a92b
+      internalID: 1331405609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_56"
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 101
+        width: 510
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856b7c0489ae3004388d97da1bd9e5de
+      internalID: -546079050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_57"
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 51
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb34ec90de0a7c4382bdf992c039837
+      internalID: 155938570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_58"
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 15
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3065cb0cd7cb1774996102d277e46b04
+      internalID: -1760279560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_59"
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 55
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1598a0796b9c97048a65eed63cbd1bdc
+      internalID: 701230616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_60"
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 56
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfb3ea7323d43b44a7beee207ce4a29
+      internalID: -837164026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_61"
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 13
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d0a1b32655fad4fbc45d9034539eeb
+      internalID: 1115531814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_62"
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 42
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48cbc2ddeed2a64ebc8446a2d78a52a
+      internalID: -587691467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_63"
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 32
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f62d43969e8fd74a9073650d8482827
+      internalID: -1754875213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_64"
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 32
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d2c913445cab54dbd5157c4539c9d9
+      internalID: -1597925269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_65"
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 55
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e2802847512204b87ad208729bcdd7
+      internalID: 716344926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_66"
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 10
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908b4c5dabea27c4f9f5b0dc30216d31
+      internalID: -486450321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_67"
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 9
+        width: 22
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5de28d055dcdfc46822d871a24c4e40
+      internalID: 1337392877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_68"
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 9
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc8175184bf68b4283c5bf20376e8f8
+      internalID: 404500648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_69"
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 8
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ee828a6cbca3045a9a11873c8248db
+      internalID: -1777133774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_70"
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 67
+        width: 450
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf55c16f579387418d4d66eeb470745
+      internalID: -1193216745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_71"
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 8
+        width: 15
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a50b557abf220948814bbcf31e3f131
+      internalID: -648086577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_72"
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 8
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70a2bbcdbe2cee4db246042909ca254
+      internalID: 14256239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_73"
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 7
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b358e8dc1a135641a53b167f71cac59
+      internalID: -363739578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buldog
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 73
+        width: 428
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4eea8cfb9729e478f7ec4134f741e7
+      internalID: -2131850280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Untitled - 10 A\u011Fustos 2026 10.32.34_75"
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 13
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1d9cc9b0c45354c85d3248972d6939
+      internalID: -1589448750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ddaba9296a977514390e8ba66ca5978a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":411.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      AK 47: -1315326779
+      AKS-74U: -1203644339
+      Buldog: -2131850280
+      M468: 1666593346
+      MP7: -1089929173
+      MP9: 1912674898
+      Pistol: 361250025
+      Revolver: -46685425
+      Revolver-Small: 1024354770
+      SMG: 1265223788
+      ShootGun: -828902349
+      ShotCannon: -949195700
+      ShotGun: 571537250
+      ShotGun-2: 572003004
+      UMP-45: -216954404
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_1": 1610997902
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_11": 1350623357
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_12": 1962704593
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_17": -1662047285
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_18": 1590461060
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_19": -802015037
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_2": 237517360
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_20": -938971068
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_22": -181648866
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_23": 70678506
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_25": -1122715189
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_27": -1966402013
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_28": 1952903733
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_30": 1332602703
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_31": -1538689318
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_32": 1732426351
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_35": 866567111
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_36": -842382503
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_37": 88488599
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_38": 1512230944
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_39": 1990157872
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_4": 1137930896
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_40": -208273453
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_41": 362331728
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_42": -1915724614
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_43": -15698462
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_44": -1481245911
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_45": -1210148016
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_46": -1054169632
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_47": 1338056233
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_48": 777229271
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_49": 602633526
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_50": -1062971253
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_51": -158867160
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_52": 270665556
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_53": -445011304
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_54": 1929397483
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_55": 1331405609
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_56": -546079050
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_57": 155938570
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_58": -1760279560
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_59": 701230616
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_6": -258051739
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_60": -837164026
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_61": 1115531814
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_62": -587691467
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_63": -1754875213
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_64": -1597925269
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_65": 716344926
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_66": -486450321
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_67": 1337392877
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_68": 404500648
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_69": -1777133774
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_70": -1193216745
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_71": -648086577
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_72": 14256239
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_73": -363739578
+      "Untitled - 10 A\u011Fustos 2026 10.32.34_75": -1589448750
+      ZDFHSDJGH: -1344209445
+      zdfsdfd: -1720166280
+      zdsgsdgsd: -1804312306
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
