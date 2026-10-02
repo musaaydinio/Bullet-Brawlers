@@ -40,6 +40,8 @@ public class SettingMenu : NetworkBehaviour
         settingsPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        KarakterKontrolleriniAyarla(false);
     }
 
     public void PaneliKapat()
@@ -47,8 +49,24 @@ public class SettingMenu : NetworkBehaviour
         settingsPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        KarakterKontrolleriniAyarla(true);
     }
-  
+
+    // Karakterin hareket, ateþ etme ve kamera kontrol script'lerini dondurur veya açar.
+    private void KarakterKontrolleriniAyarla(bool aktifMi)
+    {
+        if (parentNetworkObject == null) return;
+
+        // Movement script'ini durdur (Yürüme, dönme ve ateþ etme girdileri kesilir)
+        var movement = parentNetworkObject.GetComponent<PlayerMovement>();
+        if (movement != null) movement.enabled = aktifMi;
+
+        // Kamera script'ini durdur (Fareyle yukarý/aþaðý bakýþ kesilir)
+        var camControl = parentNetworkObject.GetComponentInChildren<CameraController>();
+        if (camControl != null) camControl.enabled = aktifMi;
+    }
+
     public void MenuyeDon()
     {
         if (NetworkManager.Singleton != null)

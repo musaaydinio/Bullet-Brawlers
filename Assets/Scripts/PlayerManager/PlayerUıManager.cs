@@ -20,6 +20,11 @@ public class PlayerUıManager : NetworkBehaviour
     public TextMeshProUGUI baslangicText; 
     public AudioClip baslangicSesi;
 
+    [Header("Kill Feed & Hit Marker")]
+    public TextMeshProUGUI killFeedText; 
+    public GameObject hitMarkerImage;
+    public float respawnSuresi = 5f;
+
     private void Start()
     {
         if(scoreboardPanel != null) scoreboardPanel.SetActive(false);
@@ -28,7 +33,7 @@ public class PlayerUıManager : NetworkBehaviour
         // Skor tablosunu Update içinde her karede güncellemek yerine, performansı korumak için saniyede bir kez çalıştırır.
         InvokeRepeating(nameof(SkorTablosuGuncellle), 0.5f, 1f);
     }
-
+    // Karakter her yeniden doğduğunda kendi doğma script'in içinden de çağırabilirsin.
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
@@ -36,7 +41,7 @@ public class PlayerUıManager : NetworkBehaviour
         {
             StartCoroutine(BaslangicEkraniRoutine());
         }
-    }
+    }   
     private IEnumerator BaslangicEkraniRoutine()
     {
         // Scene yüklendikten sonra 5 saniye bekle
@@ -60,7 +65,7 @@ public class PlayerUıManager : NetworkBehaviour
     {
         // UI işlemleri sadece karakterin kendi sahibinde çalışmalıdır.
         if (!IsOwner) return;
-
+        
         // MatchManager üzerinden ağda senkronize edilen süreyi alıp UI üzerinde formatlayarak gösterir.
         if (MatchManager._instance != null && sureText != null)
         {
@@ -124,6 +129,47 @@ public class PlayerUıManager : NetworkBehaviour
         if (skorListeText != null)
         {
             skorListeText.text = tabloIcerigi;
+        }
+    }
+
+    [ClientRpc]
+    public void KillFeedEkleClientRpc(string vuranNick, string olenNick)
+    {
+        // UI güncellemesi sadece lokal oyuncunun kendi ekranında çalışır
+        if (!IsOwner) return;
+
+        StopCoroutine(nameof(KillFeedRoutine));
+        StartCoroutine(KillFeedRoutine(vuranNick, olenNick));
+    }
+
+    private IEnumerator KillFeedRoutine(string vuranNick, string olenNick)
+    {
+        if (killFeedText != null)
+        {
+            killFeedText.gameObject.SetActive(true);
+            killFeedText.text = $"{vuranNick}  ☠️  {olenNick}";
+            yield return new WaitForSeconds(3.5f);
+            killFeedText.gameObject.SetActive(false);
+        }
+    }
+
+    [ClientRpc]
+    public void HitMarkerClientRpc()
+    {
+        // Hasar çarpısını sadece ateşi eden oyuncu görür
+        if (!IsOwner) return;
+
+        StopCoroutine(nameof(HitMarkerRoutine));
+        StartCoroutine(HitMarkerRoutine());
+    }
+
+    private IEnumerator HitMarkerRoutine()
+    {
+        if (hitMarkerImage != null)
+        {
+            hitMarkerImage.SetActive(true);
+            yield return new WaitForSeconds(0.15f);
+            hitMarkerImage.SetActive(false);
         }
     }
 

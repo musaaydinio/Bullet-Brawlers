@@ -7,6 +7,7 @@ public class InventorySlot : MonoBehaviour
     public TextMeshProUGUI weaponNameText;
     public Image weaponImage;
     public Button kusanButonu;
+    public TextMeshProUGUI bildirimText;
 
     private int _weaponId;
 
@@ -56,6 +57,12 @@ public class InventorySlot : MonoBehaviour
         PlayerPrefs.Save();
 
         Debug.Log("Lobi: Maça girerken kullanýlacak silah hafýzaya alýndý -> " + secilenSilahAdi);
+
+        if (bildirimText != null)
+        {
+            bildirimText.text = "Silah kuþanýldý!";
+            bildirimText.color = Color.green;
+        }
     }
 }
 

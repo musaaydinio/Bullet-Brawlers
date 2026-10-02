@@ -4,23 +4,26 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Text;
 
+// Maç döngüsünü, skoru, galibiyet þartlarýný ve maç sonu ekonomisini (REST API) yöneten merkezi sunucu yöneticisi
 public class MatchManager : NetworkBehaviour
 {
     public static MatchManager _instance;
 
+    // Að üzerindeki tüm istemcilerde otomatik olarak senkronize olan maç süresi ve maç durum deðiþkenleri
     public NetworkVariable<float> kalansure = new NetworkVariable<float>(605f);
     public NetworkVariable<bool> macBitti = new NetworkVariable<bool>(false);
 
-    public int killsýnýrý = 30;
+    public int killSiniri = 30;
 
     private void Awake()
     {
         if (_instance == null) _instance = this;
-        else Destroy(gameObject);       
+        else Destroy(gameObject);
     }
 
     private void Update()
     {
+        // Maç süresi takibi tamamen Sunucu Yetkilidir (Server-Authoritative); istemciler süreyi hileyle deðiþtiremez
         if (IsServer && !macBitti.Value)
         {
             kalansure.Value -= Time.deltaTime;
@@ -32,14 +35,16 @@ public class MatchManager : NetworkBehaviour
         }
     }
 
+    // Skor sýnýrýna ulaþýldýðýnda sunucu tarafýndan çaðrýlan zafer kontrolü
     public void KillSiniriKontorl(int killsayisi)
     {
-        if (IsServer && !macBitti.Value && killsayisi >= killsýnýrý)
+        if (IsServer && !macBitti.Value && killsayisi >= killSiniri)
         {
             MacBittiServerRpc();
         }
     }
 
+    // Maç bitiþ durumunu doðrulayan ve tüm istemcilere duyuran ServerRpc
     [ServerRpc(RequireOwnership = false)]
     public void MacBittiServerRpc()
     {
@@ -48,34 +53,31 @@ public class MatchManager : NetworkBehaviour
         OyunuBitirClientRpc();
     }
 
+    // Tüm istemcilerde (Clients) eþ zamanlý çalýþan, ödül panelini açan ve cüzdan güncellemesini tetikleyen ClientRpc
     [ClientRpc]
     public void OyunuBitirClientRpc()
     {
-        // 1. Ýmleci serbest býrak
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        // 2. Sahnedeki oyuncularý tara
         PlayerScore[] tumSkorlar = FindObjectsByType<PlayerScore>(FindObjectsSortMode.None);
 
         foreach (var scoreScript in tumSkorlar)
         {
             if (scoreScript.IsOwner)
             {
-                // 3. Kill sayýsýný al ve coini hesapla (Her Kill = 5 Coin)
                 int alinanKill = scoreScript.killSayisi.Value;
-                int kazanilanCoin = alinanKill * 5;
+                int kazanilanCoin = alinanKill * 30;
 
                 Debug.Log($"[MAÇ BÝTTÝ] Toplam Kill: {alinanKill} | Kazanýlan Coin: {kazanilanCoin}");
 
-                // 4. Ödül panelini aç
                 PlayerUýManager uiManager = scoreScript.GetComponent<PlayerUýManager>();
                 if (uiManager != null)
                 {
                     uiManager.OdulPaneliniAc(alinanKill, kazanilanCoin);
                 }
 
-                // 5. Doðrudan bu script içinden Web API'ye coin'i gönder
+                // Kazanýlan coin miktarý 0'dan büyükse doðrudan ASP.NET Core Web API sunucusuna POST isteði gönderilir
                 if (kazanilanCoin > 0)
                 {
                     StartCoroutine(AddCoinsCoroutine(kazanilanCoin));
@@ -86,17 +88,16 @@ public class MatchManager : NetworkBehaviour
         }
     }
 
-    // --- COÝN GÖNDERME ÝÞLEMÝ (MATCHMANAGER ÝÇÝNDE) ---
-
     [System.Serializable]
     public class AddCoinRequestDto
     {
         public int EarnedCoins;
     }
 
+    // Maç sonucunda kazanýlan altýn miktarýný güvenli bir þekilde Web API veritabanýna iþleyen asenkron istek
     private IEnumerator AddCoinsCoroutine(int earnedCoins)
     {
-        string coinUrl = "https://192.168.1.103:7023/api/Market/add-coins";
+        string coinUrl = "https://gamebackendapi-difs.onrender.com/api/Market/add-coins";
 
         AddCoinRequestDto coinData = new AddCoinRequestDto
         {
@@ -113,6 +114,7 @@ public class MatchManager : NetworkBehaviour
             request.SetRequestHeader("Content-Type", "application/json");
             request.certificateHandler = new BypassCertificate();
 
+            // Ýstemcinin oturum açarken elde ettiði JWT Bearer Token eklenerek yetkili istek atýlýr
             if (!string.IsNullOrEmpty(SessionManager.Token))
             {
                 request.SetRequestHeader("Authorization", "Bearer " + SessionManager.Token);

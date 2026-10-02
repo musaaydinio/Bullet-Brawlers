@@ -9,6 +9,7 @@ public class SettingManager : MonoBehaviour
     public TMP_Dropdown fpsDropdown;
     public Slider oyunIciSesSlider;
     public Slider menuSesSlider;
+    public Slider mouseSensitivitySlider;
 
     private void Start()
     {        
@@ -66,6 +67,12 @@ public class SettingManager : MonoBehaviour
         }
     }
 
+    public void SetMouseSensitivity(float sensitivity)
+    {
+        PlayerPrefs.SetFloat("MouseSensitivityPref", sensitivity);
+        PlayerPrefs.Save();
+    }
+
     public void QuitGame()
     {
         Debug.Log("Oyundan Çýkýlýyor...");
@@ -100,6 +107,13 @@ public class SettingManager : MonoBehaviour
             float savedMenuSesi = PlayerPrefs.GetFloat("MenuSesPref", 1f);
             menuSesSlider.value = savedMenuSesi;
             SetMenuSes(savedMenuSesi);
+        }
+
+        if (mouseSensitivitySlider != null)
+        {
+            float savedSens = PlayerPrefs.GetFloat("MouseSensitivityPref", 2f);
+            mouseSensitivitySlider.value = savedSens;
+            SetMouseSensitivity(savedSens);
         }
     }
 }

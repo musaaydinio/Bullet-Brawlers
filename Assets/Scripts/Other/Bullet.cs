@@ -8,6 +8,9 @@ public class Bullet : NetworkBehaviour
     public int damageAmount = 20;
     public float lifeTime = 20f;
 
+    [Header("Çarpma Efekti")]
+    public GameObject impactEffectPrefab;
+
     private Rigidbody rb;
     private ulong ownerClientId;
 
@@ -68,13 +71,29 @@ public class Bullet : NetworkBehaviour
                 return;
             }
             // Hedefin canýný azaltýp vuran kiþinin kimliðini bildiriyoruz.
-            targetHealth.TakeDamage(damageAmount, ownerClientId);
+            if (targetHealth != null)
+            {
+                targetHealth.TakeDamage(damageAmount, ownerClientId);
+            }
+
+            SpawnImpactEffectClientRpc(transform.position, transform.rotation);
 
             DestroyBullet();
             return;
         }
 
         DestroyBullet();
+    }
+
+    [ClientRpc]
+    private void SpawnImpactEffectClientRpc(Vector3 position, Quaternion rotation)
+    {
+        if (impactEffectPrefab != null)
+        {
+            //Efekti çarpýþma konumunda oluþturup 1.5 sn sonra sahneden temizliyoruz
+            GameObject impact = Instantiate(impactEffectPrefab, position, rotation);
+            Destroy(impact, 1.5f);
+        }
     }
 
     private void DestroyBullet()

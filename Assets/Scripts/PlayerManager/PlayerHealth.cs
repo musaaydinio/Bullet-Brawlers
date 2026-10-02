@@ -105,9 +105,20 @@ public class PlayerHealth : NetworkBehaviour
 
         currentHealth.Value -= damage;
 
+        PlayerUýManager[] tumUIlar = FindObjectsByType<PlayerUýManager>(FindObjectsSortMode.None);
+        foreach (var ui in tumUIlar)
+        {
+            if (ui.OwnerClientId == vuranKisiID)
+            {
+                ui.HitMarkerClientRpc();
+                break;
+            }
+        }
+
         if (currentHealth.Value <= 0)
         {
-            Debug.Log($"[SÝSTEM] Ölüm Gerçekleþti! Ölen: {OwnerClientId} | Vuran: {vuranKisiID}");
+            string vuranNick = "Oyuncu " + vuranKisiID;
+            string olenNick = "Oyuncu " + OwnerClientId;
 
             // Ölüm anýnda sahadaki tüm skor scriptleri taranarak mermiyi sýkan kiþi (vuranKisiID) bulunur.
             // Sadece bir oyuncu öldüðünde çalýþtýðý için performansa yük bindirmez.       
@@ -118,9 +129,23 @@ public class PlayerHealth : NetworkBehaviour
                 if (skorScript.OwnerClientId == vuranKisiID)
                 {
                     skorScript.killSayisi.Value++;
-                    Debug.Log($"[SÝSTEM] BAÞARILI! {vuranKisiID} ID'li oyuncunun skoru artýrýldý. Yeni Skor: {skorScript.killSayisi.Value}");
-                    break;
+                    vuranNick = skorScript.oyuncuNick.Value.ToString();
+
+                    if (MatchManager._instance != null)
+                    {
+                        MatchManager._instance.KillSiniriKontorl(skorScript.killSayisi.Value);
+                    }
                 }
+
+                if (skorScript.OwnerClientId == OwnerClientId)
+                {
+                    olenNick = skorScript.oyuncuNick.Value.ToString();
+                }
+            }
+
+            foreach (var ui in tumUIlar)
+            {
+                ui.KillFeedEkleClientRpc(vuranNick, olenNick);
             }
 
             Die();
@@ -149,7 +174,12 @@ public class PlayerHealth : NetworkBehaviour
 
         // Ölen karakterin hareket etmesi engellenir.
         var movement = GetComponent<PlayerMovement>();
-        if (movement != null) movement.enabled = false;
+        if (movement != null)
+        {
+            movement.enabled = false;
+
+            movement.OlumSesiCalLokal();
+        }
 
         var controller = GetComponent<CharacterController>();
         if (controller != null) controller.enabled = false;
@@ -212,6 +242,11 @@ public class PlayerHealth : NetworkBehaviour
             if(silahScpt != null)
             {
                 silahScpt.MermileriSifirla();
+            }
+
+            if (TryGetComponent<PlayerInGameInventory>(out var envanterScript))
+            {
+                envanterScript.YenidenDogusSuresiniBaslat();
             }
         }
     }

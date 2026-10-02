@@ -17,7 +17,7 @@ public class MarketManager : MonoBehaviour
     public Transform inventoryContentParent; 
     public GameObject inventoryItemPrefab;
 
-    private readonly string baseurl= "https://192.168.1.103:7023/api/Market";
+    private readonly string baseurl= "https://gamebackendapi-difs.onrender.com/api/Market";
 
     private void Start()
     {
@@ -122,7 +122,7 @@ public class MarketManager : MonoBehaviour
     }
     public IEnumerator EnvanteriGetirCoroutine()
     {
-        string url = "https://192.168.1.103:7023/api/Market/inventory";
+        string url = "https://gamebackendapi-difs.onrender.com/api/Market/inventory";
 
         using (UnityWebRequest request = new UnityWebRequest(url, "GET"))
         {
@@ -148,6 +148,11 @@ public class MarketManager : MonoBehaviour
                 // API'den gelen JSON, oyuncunun sahip olduðu silahlar listesine çevriyoruz.
                 string jsonCevap = request.downloadHandler.text;
                 WeaponDto[] sahipOlunanSilahlar = JsonHelper.FromJson<WeaponDto>(jsonCevap);
+
+                string silahIsimleri = "";
+                foreach (WeaponDto silah in sahipOlunanSilahlar) { silahIsimleri += silah.name + ","; }
+                PlayerPrefs.SetString("BenimSilahlarim", silahIsimleri);
+                PlayerPrefs.Save();
 
                 // Sahip olunan her silah için envanter ekranýnda bir slot oluþturulur.
                 foreach (WeaponDto silah in sahipOlunanSilahlar)

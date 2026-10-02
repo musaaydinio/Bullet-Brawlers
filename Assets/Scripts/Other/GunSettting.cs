@@ -1,16 +1,16 @@
 using UnityEngine;
-using Unity.Netcode;
 
 // Silahýn atýþ hýzýný, mermi kapasitesini, hasarýný ve ses efektlerinin að üzerindeki senkronizasyonunu yönetiyoruz.
-public class GunSetting : NetworkBehaviour
+
+public class GunSetting : MonoBehaviour
 {
     [Header("Bu Silaha Özel Özellikler")]
     public float atesAraligi = 0.1f;
     public bool otomatikMi = false;
     public int silahHasari = 20;
     public float mermiHizi = 40f;
-
-    [Header("Mermi ve Þarjör Ayarlarý")]
+ 
+  [Header("Mermi ve Þarjör Ayarlarý")]
     public int sarjorKapasitesi = 30;
     public int mevcutMermi;
     public int kalanSarjorHakki = 4;
@@ -18,6 +18,7 @@ public class GunSetting : NetworkBehaviour
     [Header("Mermi ve Namlu")]
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public GameObject muzzleFlashPrefab;
 
     [Header("SES AYARLARI")]
     public AudioClip atesSesi;
@@ -60,6 +61,17 @@ public class GunSetting : NetworkBehaviour
         if (reloadSesi != null && audioSource != null)
         {
             audioSource.PlayOneShot(reloadSesi);
+        }
+    }
+
+    public void AtesEfektiCal()
+    {
+        if (muzzleFlashPrefab != null && firePoint != null)
+        {
+            // Efekti firePoint noktasýnda oluþturup silaha baðlýyoruz (parent yapýyoruz)
+            GameObject flash = Instantiate(muzzleFlashPrefab, firePoint.position, firePoint.rotation, firePoint);
+
+            Destroy(flash, 0.2f);
         }
     }
 }

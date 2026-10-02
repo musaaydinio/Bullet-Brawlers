@@ -30,7 +30,7 @@ public class AuthManager : MonoBehaviour
     public TMP_InputField registerPassword;
     public TextMeshProUGUI registerFeedbackText;
 
-    private readonly string baseUrl = "https://192.168.1.103:7023/api/auth";
+    private readonly string baseUrl = "https://gamebackendapi-difs.onrender.com/api/auth";
 
     private void Update()
     {
@@ -121,8 +121,11 @@ public class AuthManager : MonoBehaviour
             //Hata var mý kontrol et diyoruz.
             if (request.result != UnityWebRequest.Result.Success)
             {
+                Debug.LogError($"[GÝRÝÞ HATASI] HTTP Kod: {request.responseCode} | Hata: {request.error}");
+                Debug.LogError($"[SUNUCU YANITI]: {request.downloadHandler.text}");
+
                 loginFeedbackText.color = Color.red;
-                loginFeedbackText.text = "Giriþ Baþarýsýz: Þifre veya Kullanýcý Adý hatalý!";
+                loginFeedbackText.text = $"Giriþ Baþarýsýz! ({request.responseCode})";
             }
             else
             {
@@ -163,8 +166,11 @@ public class AuthManager : MonoBehaviour
 
             if (request.result != UnityWebRequest.Result.Success)
             {
+                Debug.LogError($"[KAYIT HATASI] HTTP Kod: {request.responseCode} | Hata: {request.error}");
+                Debug.LogError($"[SUNUCU YANITI]: {request.downloadHandler.text}");
+
                 registerFeedbackText.color = Color.red;
-                registerFeedbackText.text = "Kayýt Baþarýsýz: Kullanýcý adý alýnmýþ olabilir!";
+                registerFeedbackText.text = $"Kayýt Baþarýsýz! ({request.responseCode})";
             }
             else
             {
